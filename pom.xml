@@ -72,6 +72,12 @@
       <layout>p2</layout>
       <url>http://download.eclipse.org/cbi/updates/license</url>
     </repository>
+      <repository>
+      <id>bw</id>
+      <layout>p2</layout>
+      <url>file://Users/abhide/Installs/BW-V/bw/6.3/p2repos</url>
+    </repository>
+  
   </repositories>
 
   <pluginRepositories>

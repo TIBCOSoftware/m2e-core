@@ -159,7 +159,6 @@ public class ProjectConfigurationManager implements IProjectConfigurationManager
           if(project != null) {
             projects.add(project);
             long importTime = System.currentTimeMillis() - t11;
-            log.debug("Imported project {} ({}/{}) in {} ms", project.getName(), ++i, total, importTime);
           }
         }
 

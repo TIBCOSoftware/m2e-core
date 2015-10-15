@@ -46,6 +46,13 @@
       <version>${slf4j-simple.version}</version>
       <optional>true</optional>
     </dependency>
+     <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j-simple.version}</version>
+      <optional>true</optional>
+    </dependency>
+    
   </dependencies>
 
   <build>
@@ -57,7 +64,7 @@
           <instructions>
             <Embed-Directory>jars</Embed-Directory>
             <Embed-Dependency>
-              slf4j-simple
+              slf4j-simple,slf4j-api
             </Embed-Dependency>
             <Import-Package>!*</Import-Package>
             <Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>

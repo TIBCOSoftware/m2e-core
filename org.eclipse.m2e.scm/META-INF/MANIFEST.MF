@@ -26,4 +26,4 @@ Require-Bundle: org.eclipse.core.resources;bundle-version="3.5.2",
  org.eclipse.ui.workbench;bundle-version="3.5.2",
  org.eclipse.ui.ide;bundle-version="3.5.1",
  org.eclipse.jdt.core;bundle-version="3.5.2";resolution:=optional,
- org.slf4j.api;bundle-version="1.6.2"
+ com.tibco.tpcl.org.slf4j.log4j12.eclipse;bundle-version="1.7.0"

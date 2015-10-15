@@ -22,7 +22,6 @@ import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.slf4j.ILoggerFactory;
 import org.slf4j.LoggerFactory;
-import org.slf4j.helpers.SubstituteLoggerFactory;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
@@ -154,17 +153,7 @@ public class LogPlugin extends Plugin {
   public static void loadConfiguration(URL configFile) throws JoranException {
     ILoggerFactory loggerFactory = LoggerFactory.getILoggerFactory();
     int i = 0;
-    while(loggerFactory instanceof SubstituteLoggerFactory && i < 100) {
-      // slf4j is initialization phase
-      systemOut("SLF4J logger factory class: " + loggerFactory.getClass().getName()); //$NON-NLS-1$
-      try {
-        Thread.sleep(50);
-      } catch(InterruptedException e) {
-        e.printStackTrace();
-      }
-      i++ ;
-      loggerFactory = LoggerFactory.getILoggerFactory();
-    }
+
     if(!(loggerFactory instanceof LoggerContext)) {
       if(loggerFactory == null) {
         // Is it possible?
